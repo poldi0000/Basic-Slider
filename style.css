@@ -1,5 +1,5 @@
 body{
-    background-color: #669966;
+    background-color: #ddd;
     padding: 0;
     margin: 0;
     font-family: 'Lobster', cursive;
@@ -12,35 +12,51 @@ body{
     margin-left: auto;
     margin-right: auto;
     box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    border: 1px solid #00aaaa;
+    border: 8px solid #00aaaa;
     text-align: center;
     font-size: 2em;
+    max-width: 399px;
+    border-radius: 10px;
 }
 
-.add{
-    width: 50%;
-    border: 2px solid #222;
-    background-color: #696;
-    margin: 5px auto 5px auto;
-    padding: 5px;
+.img_container{
+    min-height: 370px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
-.add:hover{
-    width: 50%;
-    border: 2px solid #222;
-    background-color: #696;
-    margin: 5px auto 5px auto;
-    padding: 5px;
-    opacity: 0.8;
-    cursor: pointer;
+.btn{
+    position: absolute;
+    top: 50%;
+    border: 4px solid #00aaaa;
+    background-color: #00aaaa;
+    border-radius: 5px;
+    min-width: 10px;
+    font-weight: 500;
 }
 
-#counter{
+.btn:hover{
+    animation-name: clr;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+}
+
+.btn_left{
+    left: 0;
+    transform: translate(-50%, -50%);
     color: #fff;
 }
 
-#number{
-    color: #505050;
-    font-size: 2em;
+.btn_right{
+    right: 0;
+    transform: translate(50%, -50%);
+    color: #fff;
+}
+
+@keyframes clr{
+    100%{
+        color: #00aaaa;
+        background-color: #fff;
+    }
 }
